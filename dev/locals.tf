@@ -1,8 +1,8 @@
 locals {
-  environment_path = "${path.module}/${var.environment}/network.json"
+  environment_path = "network.json"
   vnet_settings    = jsondecode(file(local.environment_path))
 
-  blob_path = "${path.module}/${var.environment}/blob.json"
+  blob_path = "blob.json"
   blob_settings = jsondecode(file(local.blob_path))
 
   subnet_objects = [
